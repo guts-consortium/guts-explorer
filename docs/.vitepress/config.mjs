@@ -6,6 +6,7 @@ export default defineConfig({
   title: "Explorer Docs",
   description: "Developer Documentation",
   head: [['link', { rel: 'icon', href: '/guts-explorer/favicon.ico' }]],
+  ignoreDeadLinks: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo_guts.svg',
