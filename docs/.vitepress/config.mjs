@@ -2,10 +2,10 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/guts-explorer/docs/",
+  base: "/guts-explorer",
   title: "Explorer Docs",
   description: "Developer Documentation",
-  head: [['link', { rel: 'icon', href: '/guts-explorer/docs/favicon.ico' }]],
+  head: [['link', { rel: 'icon', href: '/guts-explorer/favicon.ico' }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo_guts.svg',
