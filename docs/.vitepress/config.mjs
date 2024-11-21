@@ -21,6 +21,10 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Quickstart and Development',
+        link: '/development',
+      },
+      {
         text: 'Design',
         items: [
           { text: 'Application design', link: '/design' },
@@ -29,19 +33,12 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Development setup (TODO)',
-        items: [
-        ]
-      },
-      {
         text: 'Deployment (TODO)',
-        items: [
-        ]
+        link: '/deployment',
       },
       {
         text: 'Backend API Docs (TODO)',
-        items: [
-        ]
+        link: '/api'
       },
       {
         text: 'Contributing (TODO)',

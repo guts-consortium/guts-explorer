@@ -7,3 +7,7 @@ layout: doc
 ::: info
 TODO
 :::
+
+## Component integration
+
+![guts component integration](/guts_components.png)

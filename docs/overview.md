@@ -10,7 +10,11 @@ The GUTS Metadata Explorer is a browser application that allows researchers to e
 
 :rocket: Visit the application at https://metadata.gutsproject.com to see it in action.
 
-The GUTS Explorer consists of (1) a Flask-based backend server, (2) Python utility scripts, and (3) a frontend web application developed with VueJS.
+The GUTS Explorer consists of:
+
+1. a Flask-based backend server,
+2. Python utility scripts, and
+3. a frontend web application developed with VueJS
 
 ## The broader application
 
