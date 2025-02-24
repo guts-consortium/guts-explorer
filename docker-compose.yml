@@ -4,15 +4,14 @@ services:
     build:
       context: ./frontend
     ports:
-      - "3000:3000"
+      - "3000:80"
     environment:
       # Load environment variables from a file
       # Developers need to create a .env file in the frontend root
       - NODE_ENV=${NODE_ENV:-development}
     volumes:
-      - ./frontend:/app
-      - node_modules:/app/node_modules
-    command: ["npm", "run", "dev", "--verbose", "--", "--host"]
+      - ./frontend/dist:/usr/share/nginx/html  # Mount built files
+      - ./frontend/nginx.conf:/etc/nginx/nginx.conf  # Custom Nginx config
     depends_on:
       - backend
 
@@ -28,7 +27,7 @@ services:
     volumes:
       - ./backend:/app
       - data:/app/data
-    command: ["python", "-m", "flask", "--app", "src/app", "run", "--host=0.0.0.0", "--port=5000"]
+    command: ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "src.app:app"]
     depends_on:
       - metadata_updater
 
@@ -44,6 +43,4 @@ services:
 
 volumes:
   data:
-    driver: local
-  node_modules:
     driver: local
